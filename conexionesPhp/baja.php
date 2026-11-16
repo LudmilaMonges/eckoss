@@ -20,8 +20,6 @@ if (!$conexion) {
 $dni = (int) $_SESSION['dni'];
 
 // Se borra de abajo hacia arriba por las claves foráneas
-mysqli_query($conexion, "DELETE FROM servicios WHERE IDPedido IN (SELECT IDPedido FROM compras WHERE DNI = $dni)");
-mysqli_query($conexion, "DELETE FROM compras WHERE DNI = $dni");
 mysqli_query($conexion, "DELETE FROM usuarios WHERE DNI = $dni");
 
 mysqli_close($conexion);

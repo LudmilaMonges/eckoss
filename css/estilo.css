@@ -556,4 +556,6 @@ footer p {
   article:has(> ul) > .btn-contratar {
     justify-self: stretch;
   }
+
+  
 }
